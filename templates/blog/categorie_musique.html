@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block contenu %}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="card-body">
+            <h1 class="card-title text-center p-4 mb-5 mt-5 text-warning">Blog | AI Musique</h1>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row mb-5">
+            <h2 class="text-info"><u>Catégorie : Intelligence Artificielle Musique</u></h2>
+            <ul class="m-4">
+                {% for article in articles %}
+                <li class="">
+                    <h3>{{ article.titre_article }}</h3>
+                    <p style="font-size: 1em;">{{ article.synopsis_article }}</p>
+                    <p style="font-size: .8em;"><strong>Auteur :</strong> {{ article.auteur_article }}</p>
+                    <p style="font-size: .8em;"><strong>Date :</strong> {{ article.date_creation_article }}</p>
+                </li>
+                {% empty %}
+                <li>Aucun article dans cette catégorie.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock contenu %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block contenu %}
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="card-body">
+            <h1 class="card-title text-center p-4 mb-5 mt-5 text-warning">Blog | AI Générative</h1>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row mb-5">
+            <h2>Articles de la catégorie {{ categorie_nom }}</h2>
+            <ul>
+            {% for article in articles %}
+                <li>
+                    <h3>{{ article.titre_article }}</h3>
+                    <p>{{ article.synopsis_article }}</p>
+                    <p><strong>Auteur:</strong> {{ article.auteur_article }}</p>
+                    <p><strong>Date:</strong> {{ article.date_creation_article }}</p>
+                </li>
+            {% empty %}
+                <li>Aucun article dans cette catégorie.</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock contenu %}

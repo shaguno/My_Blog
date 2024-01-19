@@ -1,0 +1,56 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'img/logo.png' %}" class="img-fluid" style="max-width: 32px;"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'index' %}">Home
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button"
+                       aria-haspopup="true" aria-expanded="false">Blog</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{% url 'blog' %}">Tous les Articles</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'voir_categorie_generative' %}">IA | Générative</a>
+                        <a class="dropdown-item" href="{% url 'categorie_image' %}">IA | Image</a>
+                        <a class="dropdown-item" href="{% url 'categorie_musique' %}">IA | Musique</a>
+                        <a class="dropdown-item" href="{% url 'categorie_coding' %}">IA | Coding</a>
+                        <a class="dropdown-item" href="{% url 'categorie_autres' %}">IA | Autres</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true" aria-expanded="false">Utilisateurs</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Tous les Utilisateurs</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Créer un Utilisateur</a>
+                        <a class="dropdown-item" href="#">Modifier un Utilisateur</a>
+                        <a class="dropdown-item" href="#">Supprimer un Utilisateur</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                       aria-haspopup="true" aria-expanded="false">Article</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Tous les Articles</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Créer un Article</a>
+                        <a class="dropdown-item" href="#">Modifier un Article</a>
+                        <a class="dropdown-item" href="#">Supprimer un Article</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
